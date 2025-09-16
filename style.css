@@ -1,0 +1,53 @@
+/* --- Part 1: CSS Animations --- */
+
+/* Button hover effect */
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+/* Box for keyframe animation */
+#animatedBox {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  margin: 20px auto;
+  position: relative;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+/* Keyframe animation for the box */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+}
+
+/* Fade-in effect class (used by JS later) */
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
